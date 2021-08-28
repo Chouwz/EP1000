@@ -390,6 +390,24 @@ The hexadecimal values: red is B7, green is 00 and blue is FE.</p>
     </div>
   </div>
 
+        <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="code5.jpeg" class="w3-round w3-image" alt="idea1" width="500" height="500">
+    </div>
+
+      <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <h3> Rainbow Cycler: </h3> 
+        <p> Here is the code for the rainbow cycler. The coolest part of the lightshow. The hue of first pixel runs 3 complete loops through the color wheel. Color wheel has a range of 65536 but it's OK if we roll over, so just count from 0 to 3*65536. Adding 256 to firstPixelHue each time means we'll make 3*65536/256 = 768 passes through this outer loop...
+        </p>
+        <p>strip.ColorHSV() can take 1 or 3 arguments: a hue (0 to 65535) or optionally add saturation and value (brightness) (each 0 to 255). Here we're using just the single-argument hue variant. The result is passed through strip.gamma32() to provide 'truer' colors before assigning to each pixel. 
+        </p>
+        <p> In short, i think its each pixel reached its maximum hue at 65535, or maximum brightness at 255, before assigning the same hue and brightness to the next pixel.</p>
+   
+    </div>
+  </div>
+
+
 
 
 
